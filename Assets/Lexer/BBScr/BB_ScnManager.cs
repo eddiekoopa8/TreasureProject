@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+/* CHANGES for TREASURE PROJECT:
+ * Add "Next"
+ * Add "GetUIObject"
+ * Add "Exit"
+ */
 
 public class ScnManager : MonoBehaviour
 {
@@ -15,7 +22,15 @@ public class ScnManager : MonoBehaviour
         "ScnPrior/ScnPriorUI/ScnPriorUIEvents",
         "ScnMain",
     };
-    
+
+    enum SCNType
+    {
+        UNITY_ROOT,
+        PRIOR,
+        UI,
+        MAIN
+    };
+
     const string SCN_MANAGER_INSTANCENAME = "ScnMain";
     const bool Debugm = true;
 
@@ -28,19 +43,20 @@ public class ScnManager : MonoBehaviour
 
     static GameObject getScnObj_(string scnObj)
     {
-        string[] hierarchy = scnObj.Split('/');
-        
         GameObject found = null;
+
+        string[] hierarchy = scnObj.Split('/');
 
         string total = "/";
         foreach (string entry in hierarchy)
         {
             total += entry + "/";
             found = GameObject.Find(total);
-            Debug.Assert(found != null/*?*/, "ScnObj " + total + " doesnt exist. Is this a BBScn?");
+            Debug.Assert(found != null, "ScnObj " + total + " doesnt exist. Is this a BBScn?");
         }
 
         //Debug.Log("got obj '" + total + "' Return.");
+
         return found;
     }
     static void checkScnObj_(string scnObj)
@@ -78,6 +94,16 @@ public class ScnManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Retrieves a GameObject from ScnPrior/ScnPriorUI/ScnPriorUIBoundary.
+    /// </summary>
+    /// <param name="obj">GameObject Name.</param>
+    /// <returns>Found GameObject</returns>
+    public static GameObject GetUIObject(string obj)
+    {
+        return getScnObj_("ScnPrior/ScnPriorUI/ScnPriorUIBoundary/" + obj);
+    }
+
+    /// <summary>
     /// Returns the Scene Camera.
     /// </summary>
     /// <returns>Scene Camera</returns>
@@ -86,6 +112,13 @@ public class ScnManager : MonoBehaviour
         return GetObject("ScnPrior/ScnPriorCamera").GetComponent<Camera>();
     }
 
+    /// <summary>
+    /// Goto to the next scene via build index
+    /// </summary>
+    public static void Next()
+    {
+        SCENEManager.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     /// <summary>
     /// Goto to a new scene via name
     /// </summary>
@@ -100,6 +133,13 @@ public class ScnManager : MonoBehaviour
     public static void Reload()
     {
         SCENEManager.Restart();
+    }
+    /// <summary>
+    /// Exit the game
+    /// </summary>
+    public static void Exit()
+    {
+        SCENEManager.ExitGame();
     }
 
     public void SetCameraPosition(Vector2 vector)
