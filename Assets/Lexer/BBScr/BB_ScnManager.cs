@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /* CHANGES for TREASURE PROJECT:
- * Add "Next"
- * Add "GetUIObject"
- * Add "Exit"
+ * Can goto next or previous scene
+ * Add GetUIObject, as GetObject didn't always work
+ * Can exit the game
+ * Can goto the last current scene
  */
 
 public class ScnManager : MonoBehaviour
@@ -40,6 +42,8 @@ public class ScnManager : MonoBehaviour
     float cameraShakeLevel;
 
     public GameObject FollowObject;
+
+    static int lastScene = -1;
 
     static GameObject getScnObj_(string scnObj)
     {
@@ -117,7 +121,14 @@ public class ScnManager : MonoBehaviour
     /// </summary>
     public static void Next()
     {
-        SCENEManager.ChangeScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Goto(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    /// <summary>
+    /// Goto to the previous scene via build index
+    /// </summary>
+    public static void Previous()
+    {
+        Goto(SceneManager.GetActiveScene().buildIndex - 1);
     }
     /// <summary>
     /// Goto to a new scene via name
@@ -125,7 +136,27 @@ public class ScnManager : MonoBehaviour
     /// <param name="name">Scene Name.</param>
     public static void Goto(string name)
     {
+        Debug.Assert(lastScene != -1, "can't do last.");
+        lastScene = SceneManager.GetActiveScene().buildIndex;
         SCENEManager.ChangeScene(name);
+    }
+    /// <summary>
+    /// Goto to a new scene via ID
+    /// </summary>
+    /// <param name="name">Scene ID.</param>
+    public static void Goto(int id)
+    {
+        Debug.Assert(lastScene != -1, "can't do last.");
+        lastScene = SceneManager.GetActiveScene().buildIndex;
+        SCENEManager.ChangeScene(id);
+    }
+    /// <summary>
+    /// Goto to the last scene via build index
+    /// </summary>
+    public static void Last()
+    {
+        int old = lastScene;
+        Goto(old);
     }
     /// <summary>
     /// Restart current scene

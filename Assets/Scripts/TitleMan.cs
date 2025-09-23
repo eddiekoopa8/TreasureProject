@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class TitleManager : MonoBehaviour
 {
+    bool bShowStart = true;
     bool bShowDialog = false;
     bool bShowMain = false;
     bool bShowCredits = false;
@@ -21,7 +22,6 @@ public class TitleManager : MonoBehaviour
     };
     SignalType signal;
 
-
     void Start()
     {
         bShowDialog = false;
@@ -37,8 +37,12 @@ public class TitleManager : MonoBehaviour
             sentSignal = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && (bShowStart || bShowCredits) && !bShowDialog)
         {
+            if (!bShowMain)
+            {
+                bShowStart = false;
+            }
             //ScnManager.Next();
             bShowMain = true;
             bShowCredits = false;
@@ -75,12 +79,12 @@ public class TitleManager : MonoBehaviour
                 }
             case SignalType.SIGNAL_SELECT_MAIN_BTN_A:
                 {
-                    ScnManager.Next();
+                    ScnManager.Goto("Scenes/Game");
                     break;
                 }
             case SignalType.SIGNAL_SELECT_MAIN_BTN_B:
                 {
-                    ScnManager.Next();
+                    ScnManager.Goto("Scenes/Settings");
                     break;
                 }
             case SignalType.SIGNAL_SELECT_MAIN_BTN_C:
@@ -94,6 +98,7 @@ public class TitleManager : MonoBehaviour
         if (sentSignal)
         {
             signal = SignalType.SIGNAL_NONE;
+            Debug.Log("back to 0");
             bSentSignal = false;
         }
     }
