@@ -824,7 +824,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717955188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 453}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.40000004, y: 0.4000001, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1553,227 +1553,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263155800}
   m_CullTransparentMesh: 1
---- !u!1 &1311437901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1311437905}
-  - component: {fileID: 1311437904}
-  - component: {fileID: 1311437903}
-  - component: {fileID: 1311437902}
-  m_Layer: 0
-  m_Name: Canvas 5d005184
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1311437902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311437901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!223 &1311437903
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311437901}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &1311437904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311437901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb50b5b4038022744b7d09fe41d03007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  importController: {monoBeh: {fileID: 0}}
-  canvasDrawer: {monoBeh: {fileID: 1311437904}, imageDrawer: {monoBeh: {fileID: 0}, unityImageDrawer: {monoBeh: {fileID: 0}}, spriteRendererDrawer: {monoBeh: {fileID: 0}}}, textDrawer: {monoBeh: {fileID: 0}, unityTextDrawer: {monoBeh: {fileID: 0}}, textMeshDrawer: {monoBeh: {fileID: 0}}}, autoLayoutDrawer: {monoBeh: {fileID: 0}, gridLayoutDrawer: {monoBeh: {fileID: 0}}, vertLayoutDrawer: {monoBeh: {fileID: 0}}, horLayoutDrawer: {monoBeh: {fileID: 0}}, layoutElementDrawer: {monoBeh: {fileID: 0}}}, contentSizeFitterDrawer: {monoBeh: {fileID: 0}}, aspectRatioFitterDrawer: {monoBeh: {fileID: 0}}, maskDrawer: {monoBeh: {fileID: 0}}, toggleDrawer: {monoBeh: {fileID: 0}}, buttonDrawer: {monoBeh: {fileID: 0}, ubDrawer: {monoBeh: {fileID: 0}}}, scriptGenerator: {monoBeh: {fileID: 0}}, inputFieldDrawer: {monoBeh: {fileID: 0}}, scrollViewDrawer: {monoBeh: {fileID: 0}}, localizationDrawer: {monoBeh: {fileID: 0}, dalDrawer: {monoBeh: {fileID: 0}}}, shadowDrawer: {monoBeh: {fileID: 0}}, canvasGroupDrawer: {monoBeh: {fileID: 0}}, gameObjectDrawer: {monoBeh: {fileID: 0}, _tempFrames: {fileID: 0}}}
-  projectCacher: {monoBeh: {fileID: 0}}
-  hashCacher: {monoBeh: {fileID: 0}}
-  projectDownloader: {monoBeh: {fileID: 0}}
-  imageTypeSetter: {monoBeh: {fileID: 0}}
-  duplicateFinder: {monoBeh: {fileID: 0}}
-  scriptGenerator: {monoBeh: {fileID: 0}}
-  delegateHolder: {monoBeh: {fileID: 1311437904}}
-  settings: {monoBeh: {fileID: 1311437904}, mainSettings: {monoBeh: {fileID: 1311437904}, uiFramework: 0, positioningMode: 0, pivotType: 4, goLayer: 5, rawImport: 0, https: 1, gameObjectNameMaxLength: 32, textObjectNameMaxLength: 16, allowedNameChars:
-      - 95
-      - 32
-      - 40
-      - 41
-      - 61
-      - 46
-      - 45
-      - 91
-      - 93
-      - 43
-, windowMode: 0, projectUrl: }, uitkSettings: {monoBeh: {fileID: 0}, uitkOutputPath: Assets\UITK Output}, imageSpritesSettings: {monoBeh: {fileID: 1311437904}, proceduralCondition: 3, svgCondition: 3, imageComponent: 0, downloadMultipleFills: 1, downloadUnsupportedGradients: 1, redownloadSprites: 0, spritesPath: Assets\Sprites, imageFormat: 0, imageScale: 4, maxSpriteSize: {x: 4096, y: 4096}, preserveRatioMode: 0, pixelsPerUnit: 100, useImageLinearMaterial: 1}, textureImporterSettings: {monoBeh: {fileID: 1311437904}, crunchedCompression: 0, compressionQuality: 100, isReadable: 1, mipmapEnabled: 0, textureType: 8, textureCompression: 0, spriteImportMode: 1}, shadowSettings: {monoBeh: {fileID: 0}, shadowComponent: 0}, buttonSettings: {monoBeh: {fileID: 0}, buttonComponent: 0, unityButtonSettings: {monoBeh: {fileID: 0}, normalColor:
-          r: 1
-          g: 1
-          b: 1
-          a: 1
-, highlightedColor:
-          r: 0.9607843
-          g: 0.9607843
-          b: 0.9607843
-          a: 1
-, pressedColor:
-          r: 0.78431374
-          g: 0.78431374
-          b: 0.78431374
-          a: 1
-, selectedColor:
-          r: 0.9607843
-          g: 0.9607843
-          b: 0.9607843
-          a: 1
-, disabledColor:
-          r: 0.78431374
-          g: 0.78431374
-          b: 0.78431374
-          a: 0.5019608
-, colorMultiplier: 1, fadeDuration: 0.1}}, locSettings: {monoBeh: {fileID: 0}, locComponent: 0, locKeyCaseType: 0, currentFigmaLayoutCulture: en-US, locKeyMaxLenght: 24, localizator: {fileID: 0}, locFolderPath: Assets\Resources\Localizations, locFileName: Localization.csv, csvSeparator: 59}, scriptGenSettings: {monoBeh: {fileID: 0}, serializationMode: 0, namespace: MyNamespace, baseClass: MonoBehaviour, outputPath: Assets\GeneratedScripts, fieldNameMaxLenght: 16, methodNameMaxLenght: 16, classNameMaxLenght: 16}, novaSettings: {monoBeh: {fileID: 0}, inputTexture: {fileID: 0}}, joshPuiSettings: {monoBeh: {fileID: 0}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1, falloffDistance: 1}, mpuikitSettings: {monoBeh: {fileID: 0}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1, falloffDistance: 0.5}, dttPuiSettings: {monoBeh: {fileID: 0}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1, falloffDistance: 1}, svgImageSettings: {monoBeh: {fileID: 0}, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}}, svgImporterSettings: {monoBeh: {fileID: 0}, gradientResolution: 64, customPivot: {x: 0.5, y: 0.5}, generatePhysicsShape: 0, stepDistance: 1, samplingSteps: 3, advancedMode: 1, maxCordDeviationEnabled: 0, maxCordDeviation: 1, maxTangentAngleEnabled: 0, maxTangentAngle: 5}, unityImageSettings: {monoBeh: {fileID: 1311437904}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1}, rawImageSettings: {monoBeh: {fileID: 0}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1}, shapes2D_Settings: {monoBeh: {fileID: 0}, type: 0, raycastTarget: 1, preserveAspect: 1, raycastPadding: {x: 0, y: 0, z: 0, w: 0}, maskable: 1}, srSettings: {monoBeh: {fileID: 0}, flipX: 0, flipY: 0, maskInteraction: 0, sortPoint: 0, sortingLayer: Default, nextOrderStep: 10}, textMeshSettings: {monoBeh: {fileID: 0}, autoSize: 1, overrideTags: 0, wrapping: 1, orthographicMode: 1, richText: 1, raycastTarget: 1, parseEscapeCharacters: 1, visibleDescender: 1, kerning: 1, extraPadding: 0, overflow: 0, horizontalMapping: 0, verticalMapping: 0, geometrySorting: 0, shader: {fileID: 0}}, textFontsSettings: {monoBeh: {fileID: 0}, textComponent: 0}, unityTextSettings: {monoBeh: {fileID: 0}, bestFit: 1, fontLineSpacing: 1, horizontalWrapMode: 0, verticalWrapMode: 0}, prefabSettings: {monoBeh: {fileID: 0}, prefabsPath: Assets\Prefabs, textPrefabNameType: 0}}
-  eventHandlers: {monoBeh: {fileID: 1311437904}}
-  events: {monoBeh: {fileID: 0}, onProjectDownloadFail:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onProjectDownloadStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onProjectDownloaded:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onImportStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onImportComplete:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onImportFail:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onObjectInstantiate:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-, onAddComponent:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-}
-  ctsController: {monoBeh: {fileID: 1311437904}}
-  prefabCreator: {monoBeh: {fileID: 0}, toDestroy: []
-, pstructs: []
-, syncHelpers: []
-}
-  prefabUpdater: {monoBeh: {fileID: 0}}
-  folderCreator: {monoBeh: {fileID: 0}}
-  inspectorDrawer: {monoBeh: {fileID: 1311437904}, _selectableHambItems: []
-, _document:
-      id: 
-      name: 
-      type: 0
-      selected: 0
-      childs: []
-}
-  authorizer: {monoBeh: {fileID: 1311437904}, _selectedTableIndex: 0, _options:
-    - m_Text: Error.
-      m_Image: {fileID: 0}
-      m_Tooltip: 
-      m_TextWithWhitespace: "Error.\u200B"
-}
-  requestSender: {monoBeh: {fileID: 1311437904}, pbarProgress: 0, pbarBytes: 0, _requestCount: 0, _timeoutActive: 0, _remainingTime: 0}
-  hashGenerator: {monoBeh: {fileID: 0}}
-  nameHumanizer: {monoBeh: {fileID: 0}}
-  fontDownloader: {monoBeh: {fileID: 0}, tmpDownloader: {monoBeh: {fileID: 0}, samplingPointSize: 90, atlasPadding: 5, renderMode: 4165, atlasWidth: 512, atlasHeight: 512, atlasPopulationMode: 1, enableMultiAtlasSupport: 1, unityTmpFonts:
-        missing: []
-        existing: []
-}, ttfDownloader: {monoBeh: {fileID: 0}}, gFontsApi: {monoBeh: {fileID: 0}, fontSubsets: 1}}
-  fontLoader: {monoBeh: {fileID: 0}, ttfFontsPath: Assets/Fonts/Ttf, tmpFontsPath: Assets/Fonts/Sdf, ttfFonts: []
-, tmpFonts: []
-}
-  graphicHelpers: {monoBeh: {fileID: 0}}
-  tagSetter: {monoBeh: {fileID: 0}, _outstandingTasks: 0, _currentConcurrency: 0, _processedElements: 0}
-  spriteProcessor: {monoBeh: {fileID: 0}, _errorLogSplitLimit: 50}
-  tools: {monoBeh: {fileID: 1311437904}, needShowRateMe: 0}
-  nameSetter: {monoBeh: {fileID: 0}}
-  syncHelper: {monoBeh: {fileID: 0}}
-  transformSetter: {monoBeh: {fileID: 0}}
-  currentProject: {monoBeh: {fileID: 1311437904}, lastImportedFrames: []
-, localPrefabs: []
-, projectName: }
-  spriteGenerator: {monoBeh: {fileID: 0}, rectTransform: {fileID: 0}, meshRenderer: {fileID: 0}, meshFilter: {fileID: 0}, camera: {fileID: 0}, spriteGenerationDelay: 0.25, meshUpscaleFactor: 16, renderAntialiasing: 8, blurCoof: 10, filterMode: 1, textureFormat: 5, renderTextureFormat: 0}
-  spriteColorizer: {monoBeh: {fileID: 0}}
-  spritePathSetter: {monoBeh: {fileID: 0}}
-  spriteDownloader: {monoBeh: {fileID: 0}, _maxConcurrentDownloads: 100, _maxDownloadAttempts: 3, _maxChunkSize: 24000000, _errorLogSplitLimit: 50, _logDelayMs: 1000, _maxSpritesCount: 100}
-  spriteSlicer: {monoBeh: {fileID: 0}}
-  preImportDataCreator: {monoBeh: {fileID: 0}}
-  guid: 5d005184
-  references:
-    version: 2
-    RefIds: []
---- !u!224 &1311437905
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311437901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1324899773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +1845,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421725865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 453}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.40000004, y: 0.4000001, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2525,7 +2304,7 @@ Transform:
   m_GameObject: {fileID: 1766872904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2935,7 +2714,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147186673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 452.99994}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.40000004, y: 0.40000007, z: 0.49999997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3051,4 +2830,3 @@ SceneRoots:
   m_Roots:
   - {fileID: 550673215}
   - {fileID: 1766872905}
-  - {fileID: 1311437905}

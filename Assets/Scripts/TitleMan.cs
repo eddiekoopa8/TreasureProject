@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class TitleManager : MonoBehaviour
 {
+    static bool PressedStart = false;
     bool bShowStart = true;
     bool bShowDialog = false;
     bool bShowMain = false;
@@ -42,10 +43,17 @@ public class TitleManager : MonoBehaviour
             if (!bShowMain)
             {
                 bShowStart = false;
+                PressedStart = true;
             }
             //ScnManager.Next();
             bShowMain = true;
             bShowCredits = false;
+        }
+
+        if (PressedStart)
+        {
+            bShowStart = false;
+            bShowMain = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && !bShowDialog)

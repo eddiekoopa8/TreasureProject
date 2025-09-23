@@ -136,7 +136,6 @@ public class ScnManager : MonoBehaviour
     /// <param name="name">Scene Name.</param>
     public static void Goto(string name)
     {
-        Debug.Assert(lastScene != -1, "can't do last.");
         lastScene = SceneManager.GetActiveScene().buildIndex;
         SCENEManager.ChangeScene(name);
     }
@@ -146,7 +145,6 @@ public class ScnManager : MonoBehaviour
     /// <param name="name">Scene ID.</param>
     public static void Goto(int id)
     {
-        Debug.Assert(lastScene != -1, "can't do last.");
         lastScene = SceneManager.GetActiveScene().buildIndex;
         SCENEManager.ChangeScene(id);
     }
@@ -155,6 +153,7 @@ public class ScnManager : MonoBehaviour
     /// </summary>
     public static void Last()
     {
+        Debug.Assert(lastScene != -1, "can't do last.");
         int old = lastScene;
         Goto(old);
     }
