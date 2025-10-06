@@ -1,7 +1,63 @@
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq.Expressions;
 using UnityEngine;
+// UPDATE FOR TREASURE: Add collision handling (FINALLY)
 public class BB_PhysicsObject : MonoBehaviour
 {
+    protected class CollisionList
+    {
+        public CollisionList()
+        {
+            entries = new Dictionary<int, GameObject>();
+        }
+        public bool IsGood(GameObject obj)
+        {
+            return obj != null && obj.name != null && obj.GetInstanceID() > 0 /*I guess?????*/;
+        }
+        public bool IsGood(Collision2D col)
+        {
+            return IsGood(col.gameObject);
+        }
+        public void AddCollision(GameObject obj)
+        {
+            Debug.Log("added " + obj.name);
+            entries.Add(obj.GetInstanceID(), obj);
+        }
+        public void AddCollision(Collision2D col)
+        {
+            AddCollision(col.gameObject);
+        }
+        public void RemoveCollision(GameObject obj)
+        {
+            Debug.Log("removed " + obj.name);
+            entries.Remove(obj.GetInstanceID());
+        }
+        public void RemoveCollision(Collision2D col)
+        {
+            RemoveCollision(col.gameObject);
+        }
+        public bool Touching(GameObject obj, out GameObject collideID)
+        {
+            foreach (KeyValuePair<int, GameObject> entry in entries)
+            {
+                if (entry.Key == obj.GetInstanceID())
+                {
+                    collideID = entry.Value;
+                    return true;
+                }
+            }
+            collideID = null;
+            return false;
+        }
+        public bool Touching(GameObject obj)
+        {
+            GameObject dummy = null;
+            return Touching(obj, out dummy);
+        }
+        Dictionary<int, GameObject> entries;
+    };
+
     protected bool isGrounded = false;
     protected bool isLeft = false;
     protected bool isRight = false;
@@ -25,11 +81,14 @@ public class BB_PhysicsObject : MonoBehaviour
 
     protected Vector2 previousVelocity;
 
+    protected CollisionList collisions;
+
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
         collide = GetComponent<BoxCollider2D>();
+        collisions = new CollisionList();
 
         ActorStart();
 
@@ -139,5 +198,23 @@ public class BB_PhysicsObject : MonoBehaviour
         {
             enabled = true;
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collisions.IsGood(collision))
+        {
+            return;
+        }
+        collisions.AddCollision(collision);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!collisions.IsGood(collision))
+        {
+            return;
+        }
+        collisions.RemoveCollision(collision);
     }
 }

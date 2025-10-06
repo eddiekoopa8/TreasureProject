@@ -23,11 +23,11 @@ public class PlayerMain : BB_PhysicsObject
     bool isJumping = false;
 
     static int mSpeed = 4;
-    static int jHeight = 12;
+    static int jHeight = 6;
 
     public override void ActorStart()
     {
-        
+        jHeight *= 2;
     }
     public override void ActorUpdate()
     {
@@ -50,15 +50,12 @@ public class PlayerMain : BB_PhysicsObject
             isMoving = true;
             direction = Dir.LEFT;
         }
-        
         if (!INPUT_LEFT && !INPUT_RIGHT)
         {
             isMoving = false;
         }
-
         if (INPUT_JUMP && isGrounded)
         {
-            Debug.Log("requestJump !!!!");
             requestJump = true;
         }
 
@@ -79,10 +76,15 @@ public class PlayerMain : BB_PhysicsObject
             requestJump = false;
             isJumping = true;
         }
-
         if (isGrounded && isJumping)
         {
             isJumping = false;
         }
+
+        /*GameObject obj;
+        if (collisions.Touching(GameObject.Find("Square"), out obj))
+        {
+            obj.transform.position = new Vector3(-100,-100,-100);
+        }*/
     }
 }
