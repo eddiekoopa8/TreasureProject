@@ -16,6 +16,8 @@ public class PlayerMain : BB_PhysicsObject
 
     // moving
     bool isMoving = false;
+    bool canMove = true;
+    bool dashing = false;
     Dir direction = Dir.RIGHT;
 
     // jumping
@@ -33,6 +35,7 @@ public class PlayerMain : BB_PhysicsObject
     {
         bool INPUT_RIGHT = Input.GetKey(KeyCode.RightArrow);
         bool INPUT_LEFT = Input.GetKey(KeyCode.LeftArrow);
+        bool INPUT_DASH = Input.GetKeyDown(KeyCode.LeftShift);
         bool INPUT_JUMP = Input.GetKeyDown(KeyCode.Space);
 
         hitWall = isLeft && isRight;
@@ -60,13 +63,16 @@ public class PlayerMain : BB_PhysicsObject
         }
 
         // Movement
-        if (isMoving)
+        if (canMove)
         {
-            rigidbody.linearVelocityX = mSpeed * (int)direction;
-        }
-        else
-        {
-            rigidbody.linearVelocityX = 0;
+            if (isMoving)
+            {
+                rigidbody.linearVelocityX = mSpeed * (int)direction;
+            }
+            else
+            {
+                rigidbody.linearVelocityX = 0;
+            }
         }
 
         // Jumping
@@ -79,6 +85,18 @@ public class PlayerMain : BB_PhysicsObject
         if (isGrounded && isJumping)
         {
             isJumping = false;
+        }
+
+        if (INPUT_DASH && !dashing)
+        {
+            rigidbody.linearVelocityX += 6 * (int)direction;
+            dashing = true;
+        }
+
+        if (dashing && rigidbody.linearVelocityX <= 0.1 && rigidbody.linearVelocityX >= -0.1)
+        {
+            canMove = true;
+            dashing = false;
         }
 
         /*GameObject obj;

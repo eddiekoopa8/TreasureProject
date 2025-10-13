@@ -87,7 +87,7 @@ public class TitleManager : MonoBehaviour
                 }
             case SignalType.SIGNAL_SELECT_MAIN_BTN_A:
                 {
-                    ScnManager.Goto("Scenes/Game");
+                    ScnManager.Goto("Scenes/Level01");
                     break;
                 }
             case SignalType.SIGNAL_SELECT_MAIN_BTN_B:
