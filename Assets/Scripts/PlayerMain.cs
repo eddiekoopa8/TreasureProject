@@ -69,10 +69,6 @@ public class PlayerMain : BB_PhysicsObject
             {
                 rigidbody.linearVelocityX = mSpeed * (int)direction;
             }
-            else
-            {
-                rigidbody.linearVelocityX = 0;
-            }
         }
 
         // Jumping
@@ -98,11 +94,5 @@ public class PlayerMain : BB_PhysicsObject
             canMove = true;
             dashing = false;
         }
-
-        /*GameObject obj;
-        if (collisions.Touching(GameObject.Find("Square"), out obj))
-        {
-            obj.transform.position = new Vector3(-100,-100,-100);
-        }*/
     }
 }
