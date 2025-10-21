@@ -24,12 +24,16 @@ public class PlayerMain : BB_PhysicsObject
     bool requestJump = false;
     bool isJumping = false;
 
-    static int mSpeed = 4;
-    static int jHeight = 6;
+    static int mSpeed = 8;
+    static int jHeight = 8;
+
+    Animator animator;
 
     public override void ActorStart()
     {
         jHeight *= 2;
+
+        animator = GetComponent<Animator>();
     }
     public override void ActorUpdate()
     {
@@ -68,6 +72,11 @@ public class PlayerMain : BB_PhysicsObject
             if (isMoving)
             {
                 rigidbody.linearVelocityX = mSpeed * (int)direction;
+                renderer.flipX = direction == Dir.LEFT;
+            }
+            else
+            {
+                rigidbody.linearVelocityX = 0;
             }
         }
 
@@ -83,16 +92,21 @@ public class PlayerMain : BB_PhysicsObject
             isJumping = false;
         }
 
-        if (INPUT_DASH && !dashing)
+        // Animation
+        if (!isGrounded)
         {
-            rigidbody.linearVelocityX += 6 * (int)direction;
-            dashing = true;
+            animator.Play("Jump");
         }
-
-        if (dashing && rigidbody.linearVelocityX <= 0.1 && rigidbody.linearVelocityX >= -0.1)
+        else
         {
-            canMove = true;
-            dashing = false;
+            if (isMoving)
+            {
+                animator.Play("Walk");
+            }
+            else
+            {
+                animator.Play("Idle");
+            }
         }
     }
 }

@@ -132,37 +132,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PWalkNew_0
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 12
-        width: 16
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9eb813863ce1c7d30800000000000000
-      internalID: 4430449958041258985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PWalkNew_1
       rect:
         serializedVersion: 2
-        x: 30
-        y: 17
-        width: 63
-        height: 111
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: PWalkNew_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 11
-        width: 16
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9af90363bace1efa0800000000000000
-      internalID: -5773073027219546199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eca6f9d92feff294c996526ebde2192f
     internalID: 0
     vertices: []
     indices: 

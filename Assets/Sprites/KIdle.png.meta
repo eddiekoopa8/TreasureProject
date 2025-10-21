@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: e8dbce3ac01674648b10b2d5a277a541
+guid: d571dcee13169b94ba9feed1fa4fa392
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 654125267579693747
-    second: PWalk_0
-  - first:
-      213: -7127896443840967906
-    second: PWalk_1
-  - first:
-      213: -8078552179170668677
-    second: PWalk_2
+      213: 8750662238342440818
+    second: KIdle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PWalk_1
+      name: KIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 18
+        y: 8
+        width: 27
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1bc61513ff941d90800000000000000
-      internalID: -7127896443840967906
+      spriteID: 27763d951f8907970800000000000000
+      internalID: 8750662238342440818
       vertices: []
       indices: 
       edges: []
@@ -157,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d80576e7ae81544d9584380f274623c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -167,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PWalk_0: 654125267579693747
-      PWalk_1: -7127896443840967906
-      PWalk_2: -8078552179170668677
+      KIdle_0: 8750662238342440818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

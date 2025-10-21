@@ -1,16 +1,58 @@
 fileFormatVersion: 2
-guid: e8dbce3ac01674648b10b2d5a277a541
+guid: 5d94569c7abd2c348b4f06cb49074527
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 654125267579693747
-    second: PWalk_0
+      213: -6747642786209830625
+    second: T1_0
   - first:
-      213: -7127896443840967906
-    second: PWalk_1
+      213: 537148388550649708
+    second: T1_1
   - first:
-      213: -8078552179170668677
-    second: PWalk_2
+      213: -3755516021829797718
+    second: T1_2
+  - first:
+      213: 2297083168669722381
+    second: T1_3
+  - first:
+      213: 8560663930702621649
+    second: T1_4
+  - first:
+      213: 9116649567114451034
+    second: T1_5
+  - first:
+      213: -8556367170434230760
+    second: T1_6
+  - first:
+      213: 526616663398193610
+    second: T1_7
+  - first:
+      213: 7809526011021617499
+    second: T1_8
+  - first:
+      213: 7599822137876086662
+    second: T1_9
+  - first:
+      213: -1338010740025502240
+    second: T1_10
+  - first:
+      213: -7128730462620175068
+    second: T1_11
+  - first:
+      213: 7922184074369085333
+    second: T1_12
+  - first:
+      213: 9068646207549080343
+    second: T1_13
+  - first:
+      213: -7689945914474565798
+    second: T1_14
+  - first:
+      213: 2084234781999735451
+    second: T1_15
+  - first:
+      213: 3290152615406545117
+    second: T1_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,13 +174,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PWalk_1
+      name: T1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 600
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1bc61513ff941d90800000000000000
-      internalID: -7127896443840967906
+      spriteID: f196cb0f2ae8b52a0800000000000000
+      internalID: -6747642786209830625
       vertices: []
       indices: 
       edges: []
@@ -157,7 +199,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d80576e7ae81544d9584380f274623c
+    spriteID: 4907245e2370f4848bd6f345ade949df
     internalID: 0
     vertices: []
     indices: 
@@ -167,9 +209,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PWalk_0: 654125267579693747
-      PWalk_1: -7127896443840967906
-      PWalk_2: -8078552179170668677
+      T1_0: -6747642786209830625
+      T1_1: 537148388550649708
+      T1_10: -1338010740025502240
+      T1_11: -7128730462620175068
+      T1_12: 7922184074369085333
+      T1_13: 9068646207549080343
+      T1_14: -7689945914474565798
+      T1_15: 2084234781999735451
+      T1_16: 3290152615406545117
+      T1_2: -3755516021829797718
+      T1_3: 2297083168669722381
+      T1_4: 8560663930702621649
+      T1_5: 9116649567114451034
+      T1_6: -8556367170434230760
+      T1_7: 526616663398193610
+      T1_8: 7809526011021617499
+      T1_9: 7599822137876086662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

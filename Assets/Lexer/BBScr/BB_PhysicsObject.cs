@@ -21,7 +21,7 @@ public class BB_PhysicsObject : MonoBehaviour
         }
         public void AddCollision(GameObject obj)
         {
-            Debug.Log("added " + obj.name);
+            Debug.Log("added " + obj.name + " (" + obj.GetInstanceID() + ")");
             entries.Add(obj.GetInstanceID(), obj);
         }
         public void AddCollision(Collision2D col)
@@ -30,7 +30,7 @@ public class BB_PhysicsObject : MonoBehaviour
         }
         public void RemoveCollision(GameObject obj)
         {
-            Debug.Log("removed " + obj.name);
+            Debug.Log("removed " + obj.name + " (" + obj.GetInstanceID() + ")");
             entries.Remove(obj.GetInstanceID());
         }
         public void RemoveCollision(Collision2D col)

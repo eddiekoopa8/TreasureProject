@@ -204,6 +204,7 @@ public class ScnManager : MonoBehaviour
         {
             Debug.Log("ScnPointStart");
         }
+        Debug.Log("scene is ready");
     }
     Vector3 fPos;
     private void Update()
