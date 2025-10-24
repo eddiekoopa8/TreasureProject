@@ -25,14 +25,12 @@ public class PlayerMain : BB_PhysicsObject
     bool isJumping = false;
 
     static int mSpeed = 8;
-    static int jHeight = 8;
+    static int jHeight = 8 * 2;
 
     Animator animator;
 
     public override void ActorStart()
     {
-        jHeight *= 2;
-
         animator = GetComponent<Animator>();
     }
     public override void ActorUpdate()
