@@ -5442,6 +5442,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1d5197d312faaac44975ce5eafca5749, type: 2}
+    - target: {fileID: 2342752687369854542, guid: 43de79efa517fc54784df1ec96714de7, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f6f34061131048e498d5e3cc672b80e1, type: 3}
     - target: {fileID: 5780992716024211527, guid: 43de79efa517fc54784df1ec96714de7, type: 3}
       propertyPath: m_Name
       value: PlayerMain

@@ -33,6 +33,11 @@ public class PlayerMain : BB_PhysicsObject
     {
         animator = GetComponent<Animator>();
     }
+    void PlayAudio(string name)
+    {
+        if (GameObject.Find(gameObject.name + "_IAUDIO_Obj_" + name).GetComponent<AudioSource>() != null)
+            GameObject.Find(gameObject.name + "_IAUDIO_Obj_" + name).GetComponent<AudioSource>().Play();
+    }
     public override void ActorUpdate()
     {
         bool INPUT_RIGHT = Input.GetKey(KeyCode.RightArrow);
@@ -62,6 +67,7 @@ public class PlayerMain : BB_PhysicsObject
         if (INPUT_JUMP && isGrounded)
         {
             requestJump = true;
+            PlayAudio("bounce");
         }
 
         // Movement
